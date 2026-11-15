@@ -9,7 +9,7 @@ def main():
     extenstions = ['.png', '.jpeg', '.jpg']
     if os.path.splitext(inputfile)[1].lower() not in extenstions :
         sys.exit(" Invalid input")
-    elif os.path.splitext(outputfile)[1].lower() != os.path.splitext(inputfile)[1].lower():
+    elif os.path.splitext(outputfile)[1`].lower() != os.path.splitext(inputfile)[1].lower():
         sys.exit("Input and output have different extensions")
     elif os.path.splitext(outputfile)[1].lower() not in extenstions:
         sys.exit("Invalid output")

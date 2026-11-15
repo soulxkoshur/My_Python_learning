@@ -1,15 +1,17 @@
-due = 50
-change = [5, 15, 25, 10]
-
+amount = 50
+print("Amount due:", amount)
 while True:
-    
-    print("Amount Due: ", due)
-    coin = int(input("Insert coin: "))
-    if  coin not in change:
-        continue 
-    elif due >= coin:
-        print(f"Change Owed: {due}")
-        due = due - coin
-    if due == 0:
-        print("Change Owed: 0")
+    if amount > 0:
+        coin = int(input("insert coin: "))
+        if coin == 25 or coin == 10 or coin == 5:
+            amount -= coin
+            if amount > 0:
+                print("Amount due:", amount)
+        elif coin != 25 or coin != 10 or coin != 5:
+            print("Amount due:", amount)
+        else:
+            continue
+    else:
+        if amount <= 0:
+            print("Change owed:", -amount)
         break
